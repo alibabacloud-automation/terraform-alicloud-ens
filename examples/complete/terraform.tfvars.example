@@ -1,0 +1,27 @@
+# Example configuration file for ENS module
+# Copy this file to terraform.tfvars and customize the values
+
+# ENS region where resources will be created
+ens_region_id = "cn-chenzhou-telecom_unicom_cmcc"
+
+# Name prefix for all resources
+example_name = "ens-example"
+
+# Instance configuration
+instance_type = "ens.sn1.stiny"
+image_id      = "centos_6_08_64_20G_alibase_20171208"
+
+# Instance password (change this!)
+instance_password = "Example123456!"
+
+# EIP configuration
+create_eip = false
+
+# Network configuration
+# Option 1: Create a new network (requires available network quota)
+# create_network       = true
+# existing_network_id  = null
+
+# Option 2: Use an existing network (recommended if quota is limited)
+create_network      = false
+existing_network_id = "n-xxxxx"  # Replace with your existing network ID
